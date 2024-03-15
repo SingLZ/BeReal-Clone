@@ -20,8 +20,6 @@
 		4DC29F2E2B98E0B7004F4672 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC29F2D2B98E0B7004F4672 /* PostViewController.swift */; };
 		4DC29F322B98E11E004F4672 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC29F312B98E11E004F4672 /* User.swift */; };
 		4DC29F342B98E124004F4672 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC29F332B98E124004F4672 /* Post.swift */; };
-		4DC29F372B98E26E004F4672 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4DC29F362B98E26E004F4672 /* Alamofire */; };
-		4DC29F392B98E26E004F4672 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 4DC29F382B98E26E004F4672 /* AlamofireDynamic */; };
 		4DC29F3C2B98E298004F4672 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4DC29F3B2B98E298004F4672 /* AlamofireImage */; };
 		4DC29F3F2B993C1E004F4672 /* DataFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC29F3E2B993C1E004F4672 /* DataFormatter+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -51,8 +49,6 @@
 			files = (
 				4DC29F202B97FFF9004F4672 /* ParseSwift in Frameworks */,
 				4DC29F3C2B98E298004F4672 /* AlamofireImage in Frameworks */,
-				4DC29F392B98E26E004F4672 /* AlamofireDynamic in Frameworks */,
-				4DC29F372B98E26E004F4672 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,8 +150,6 @@
 			name = "project2-BeReal Clone";
 			packageProductDependencies = (
 				4DC29F1F2B97FFF9004F4672 /* ParseSwift */,
-				4DC29F362B98E26E004F4672 /* Alamofire */,
-				4DC29F382B98E26E004F4672 /* AlamofireDynamic */,
 				4DC29F3B2B98E298004F4672 /* AlamofireImage */,
 			);
 			productName = "project2-BeReal Clone";
@@ -188,7 +182,6 @@
 			mainGroup = 4DC29EFE2B97FFE9004F4672;
 			packageReferences = (
 				4DC29F1E2B97FFF9004F4672 /* XCRemoteSwiftPackageReference "Parse-Swift" */,
-				4DC29F352B98E26E004F4672 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				4DC29F3A2B98E297004F4672 /* XCRemoteSwiftPackageReference "Alamofireimage" */,
 			);
 			productRefGroup = 4DC29F082B97FFE9004F4672 /* Products */;
@@ -291,6 +284,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -305,8 +299,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = NO;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -362,8 +356,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = NO;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -379,6 +373,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2C62GT3KPL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "project2-BeReal Clone/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -386,12 +381,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Codepath.project2-BeReal-Clone";
+				PRODUCT_BUNDLE_IDENTIFIER = lixing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -406,6 +402,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2C62GT3KPL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "project2-BeReal Clone/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -413,12 +410,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Codepath.project2-BeReal-Clone";
+				PRODUCT_BUNDLE_IDENTIFIER = lixing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -458,14 +456,6 @@
 				minimumVersion = 4.14.2;
 			};
 		};
-		4DC29F352B98E26E004F4672 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.9.0;
-			};
-		};
 		4DC29F3A2B98E297004F4672 /* XCRemoteSwiftPackageReference "Alamofireimage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofireimage.git";
@@ -481,16 +471,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4DC29F1E2B97FFF9004F4672 /* XCRemoteSwiftPackageReference "Parse-Swift" */;
 			productName = ParseSwift;
-		};
-		4DC29F362B98E26E004F4672 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4DC29F352B98E26E004F4672 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		4DC29F382B98E26E004F4672 /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4DC29F352B98E26E004F4672 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
 		};
 		4DC29F3B2B98E298004F4672 /* AlamofireImage */ = {
 			isa = XCSwiftPackageProductDependency;
