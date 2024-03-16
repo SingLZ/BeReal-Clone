@@ -57,7 +57,7 @@ It was challenging for me to format the cell so everything appear correctly on t
 
 
 
-# Project 3 - *BeReal Part2e*
+# Project 3 - *BeReal Part2*
 
 Submitted by: **Lixing Zheng**
 
