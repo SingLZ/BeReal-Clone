@@ -23,6 +23,8 @@
 		4DC29F342B98E124004F4672 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC29F332B98E124004F4672 /* Post.swift */; };
 		4DC29F3C2B98E298004F4672 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4DC29F3B2B98E298004F4672 /* AlamofireImage */; };
 		4DC29F3F2B993C1E004F4672 /* DataFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC29F3E2B993C1E004F4672 /* DataFormatter+Extension.swift */; };
+		4DD3A5272BA5F3330005C6ED /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD3A5262BA5F3330005C6ED /* CommentViewController.swift */; };
+		4DD3A5292BA5FF020005C6ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD3A5282BA5FF020005C6ED /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		4DC29F312B98E11E004F4672 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4DC29F332B98E124004F4672 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		4DC29F3E2B993C1E004F4672 /* DataFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataFormatter+Extension.swift"; sourceTree = "<group>"; };
+		4DD3A5262BA5F3330005C6ED /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		4DD3A5282BA5FF020005C6ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				4DC29F0A2B97FFE9004F4672 /* AppDelegate.swift */,
 				4DC29F0C2B97FFE9004F4672 /* SceneDelegate.swift */,
 				4DC29F302B98E10E004F4672 /* Models */,
+				4DD3A5262BA5F3330005C6ED /* CommentViewController.swift */,
+				4DD3A5282BA5FF020005C6ED /* ViewController.swift */,
 				4DC29F2C2B98E0AB004F4672 /* Post */,
 				4DC29F232B98DF1C004F4672 /* Login */,
 				4DC29F262B98DFB0004F4672 /* Feed */,
@@ -220,8 +226,10 @@
 				4DC29F0D2B97FFE9004F4672 /* SceneDelegate.swift in Sources */,
 				4DC29F322B98E11E004F4672 /* User.swift in Sources */,
 				4DC29F282B98DFDA004F4672 /* FeedViewController.swift in Sources */,
+				4DD3A5292BA5FF020005C6ED /* ViewController.swift in Sources */,
 				4DC29F3F2B993C1E004F4672 /* DataFormatter+Extension.swift in Sources */,
 				4DC29F2E2B98E0B7004F4672 /* PostViewController.swift in Sources */,
+				4DD3A5272BA5F3330005C6ED /* CommentViewController.swift in Sources */,
 				4DC29F252B98DF64004F4672 /* SignUpViewController.swift in Sources */,
 				4D4F73BF2BA5912F00EBF32A /* Comment.swift in Sources */,
 				4DC29F342B98E124004F4672 /* Post.swift in Sources */,

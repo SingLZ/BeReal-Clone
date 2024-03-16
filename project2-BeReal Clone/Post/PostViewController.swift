@@ -77,18 +77,39 @@ class PostViewController: UIViewController {
         // Set properties
         post.imageFile = imageFile
         post.caption = captionTextField.text
-        
-        // Set the user as the current user
         post.user = User.current
         
+        // Set the user as the current user
+        if var currentUser = User.current {
+            currentUser.lastPostedDate = Date()
+            currentUser.save { [weak self] result in
+                    switch result {
+                    case .success(let user):
+                        print("✅ User Saved! \(user)")
+                    case .failure(let error):
+                        self?.showAlert(description: error.localizedDescription)
+                                      }
+                                  }
+                            }
         
-        
+
         // Call geocodeLocation to update location information
             if let location = locationManager.location {
                 geocodeLocation(location) { city, state in
                     // Update post with city and state information
                     self.post.city = city
                     self.post.state = state
+                    
+                    
+                    let currentTime = Date()
+                            
+                            // Get time components from current time
+                            let calendar = Calendar.current
+                            let timeComponents = calendar.dateComponents([.hour, .minute, .second], from: currentTime)
+                            
+                            // Set time components to post
+                            self.post.time = timeComponents
+                    
                     
                     // Save object in background (async)
                     self.post.save { [weak self] result in
@@ -103,29 +124,7 @@ class PostViewController: UIViewController {
                     }
                 }
             }
-        
-        // Save object in background (async)
-        //post.save { [weak self] result in
-          //  if var currentUser = User.current{
-            //    currentUser.lastPostedDate = Date()
-                // TODO: Pt 2 - Update user's last posted date
-                // Switch to the main thread for any UI updates
-                // Switch to the main thread for any UI updates
-              //  currentUser.save { [weak self] result in
-                //    switch result {
-                  //  case .success(let post):
-                    //    print("✅ Post Saved! \(post)")
-                        
-                        // TODO: Pt 2 - Update user's last posted date
-                        // Switch to the main thread for any UI updates
-                      //  DispatchQueue.main.async {
-                            // Return to previous view controller
-                        //    self?.navigationController?.popViewController(animated: true)
-                        //}
-                        
-                    //case .failure(let error):
-                      //  self?.showAlert(description: error.localizedDescription)
-                    //}
+
                 //}
             //}
         //}

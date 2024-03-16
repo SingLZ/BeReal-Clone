@@ -8,34 +8,21 @@
 import Foundation
 import ParseSwift
 
-struct Comment: ParseObject, Identifiable {
+struct Comment: ParseObject {
     var originalData: Data?
+    
+    // Required properties
     var objectId: String?
     var createdAt: Date?
     var updatedAt: Date?
     var ACL: ParseACL?
-    var text: String
-    var user: User
-    var post: Post
-    
-    
-    init() {
-            self.objectId = nil
-            self.createdAt = nil
-            self.updatedAt = nil
-            self.ACL = nil
-            self.text = ""
-            self.user = User()
-            self.post = Post()
-        }
+
+    // Additional properties
+    var text: String?
+    var user: User?
+    var post: Post?
 }
 
-extension Comment {
-    init(text: String, user: User, post: Post) {
-        self.text = text
-        self.user = user
-        self.post = post
-    }
-}
+
 
 

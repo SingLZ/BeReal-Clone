@@ -196,16 +196,16 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="527"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="g8a-GL-pZR">
-                                                            <rect key="frame" x="0.0" y="0.0" width="300" height="102.33333333333333"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="300" height="82"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7VP-9c-pef">
-                                                                    <rect key="frame" x="16" y="0.0" width="268" height="82"/>
+                                                                    <rect key="frame" x="16" y="0.0" width="268" height="41.333333333333336"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jz2-vc-wOc">
-                                                                    <rect key="frame" x="16" y="82" width="268" height="20.333333333333329"/>
+                                                                    <rect key="frame" x="16" y="41.333333333333336" width="268" height="20.333333333333336"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="20.333333333333329" id="CFd-Kb-6ud"/>
                                                                     </constraints>
@@ -213,11 +213,20 @@
                                                                     <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NZ-43-TJd">
+                                                                    <rect key="frame" x="16" y="61.666666666666664" width="268" height="20.333333333333336"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="Jz2-vc-wOc" firstAttribute="top" secondItem="g8a-GL-pZR" secondAttribute="top" constant="41.333333333333329" id="gQL-eu-0lW"/>
+                                                            </constraints>
                                                             <edgeInsets key="layoutMargins" top="0.0" left="16" bottom="0.0" right="16"/>
                                                         </stackView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ya-iH-dS3">
-                                                            <rect key="frame" x="0.0" y="144.33333333333337" width="300" height="300"/>
+                                                            <rect key="frame" x="0.0" y="124" width="300" height="300"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dkb-Ie-dil">
                                                                     <rect key="frame" x="0.0" y="0.0" width="390" height="390"/>
@@ -245,7 +254,7 @@
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wU2-gm-E96">
-                                                            <rect key="frame" x="0.0" y="486.33333333333331" width="300" height="40.666666666666686"/>
+                                                            <rect key="frame" x="0.0" y="466" width="300" height="61"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndT-mp-D2d">
                                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="20.333333333333332"/>
@@ -254,21 +263,33 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T4h-Kg-iav">
-                                                                    <rect key="frame" x="0.0" y="20.333333333333371" width="300" height="20.333333333333329"/>
+                                                                    <rect key="frame" x="0.0" y="20.333333333333314" width="300" height="20.333333333333329"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRm-M2-vgE">
+                                                                    <rect key="frame" x="0.0" y="40.666666666666686" width="300" height="20.333333333333329"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="7Ya-iH-dS3" firstAttribute="top" secondItem="nv2-y5-2Ud" secondAttribute="top" constant="124" id="15Q-cz-HRH"/>
+                                                    </constraints>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHX-an-MOi">
-                                                    <rect key="frame" x="298" y="481" width="75" height="35"/>
+                                                    <rect key="frame" x="286" y="481" width="99" height="46"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Make a Comment"/>
+                                                    <connections>
+                                                        <segue destination="NdW-0d-56c" kind="show" id="zCu-Dx-9Gc"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -281,10 +302,11 @@
                                         <connections>
                                             <outlet property="blurView" destination="g5F-dy-Lfv" id="DDx-N4-nMp"/>
                                             <outlet property="captionLabel" destination="ndT-mp-D2d" id="pbB-V4-14c"/>
-                                            <outlet property="commentButton" destination="yHX-an-MOi" id="D4e-GE-QRH"/>
+                                            <outlet property="commentLabel" destination="IRm-M2-vgE" id="Yrg-eT-P2q"/>
                                             <outlet property="dateLabel" destination="T4h-Kg-iav" id="u4O-dq-cbM"/>
                                             <outlet property="locationLabel" destination="Jz2-vc-wOc" id="BcD-Nk-cVU"/>
                                             <outlet property="postImageView" destination="Dkb-Ie-dil" id="BaV-jo-oy8"/>
+                                            <outlet property="timeLabel" destination="7NZ-43-TJd" id="wvM-xy-SbA"/>
                                             <outlet property="usernameLabel" destination="7VP-9c-pef" id="ECh-7N-IWO"/>
                                         </connections>
                                     </tableViewCell>
@@ -399,10 +421,49 @@
             </objects>
             <point key="canvasLocation" x="61.832061068702288" y="629.57746478873241"/>
         </scene>
+        <!--Comment View Controller-->
+        <scene sceneID="Edv-Cf-6pa">
+            <objects>
+                <viewController id="NdW-0d-56c" customClass="CommentViewController" customModule="project2_BeReal_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="woI-um-jse">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efk-IG-J2h">
+                                <rect key="frame" x="147" y="359" width="99" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Comment"/>
+                                <connections>
+                                    <action selector="commentButtonTap:" destination="NdW-0d-56c" eventType="touchUpInside" id="q0h-zG-8Py"/>
+                                    <segue destination="SCm-dx-mcU" kind="show" id="yVo-Vm-qlv"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wbz-gZ-4ZK">
+                                <rect key="frame" x="59" y="274" width="270" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Sjd-0O-W34"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EzD-B1-U0t"/>
+                    <connections>
+                        <outlet property="commonTextField" destination="wbz-gZ-4ZK" id="eLY-C7-KYA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uQP-2X-oL5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1535" y="1351"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lQC-MA-DXK"/>
-        <segue reference="g9B-01-cZX"/>
+        <segue reference="zCu-Dx-9Gc"/>
+        <segue reference="yVo-Vm-qlv"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="person.3.fill" catalog="system" width="128" height="66"/>

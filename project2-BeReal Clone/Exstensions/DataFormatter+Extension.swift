@@ -13,5 +13,11 @@ extension DateFormatter {
         formatter.dateStyle = .full
         return formatter
     }()
+    
+    
+    static var timeFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        return formatter
+    }()
 }
-

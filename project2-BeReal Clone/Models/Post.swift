@@ -26,4 +26,6 @@ struct Post: ParseObject {
     var longitude: Double?
     var city : String?
     var state : String?
+    var comments: [Comment]?
+    var time:  DateComponents?
 }
