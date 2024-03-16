@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D4F73BF2BA5912F00EBF32A /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4F73BE2BA5912F00EBF32A /* Comment.swift */; };
 		4DC29F0B2B97FFE9004F4672 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC29F0A2B97FFE9004F4672 /* AppDelegate.swift */; };
 		4DC29F0D2B97FFE9004F4672 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC29F0C2B97FFE9004F4672 /* SceneDelegate.swift */; };
 		4DC29F122B97FFE9004F4672 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC29F102B97FFE9004F4672 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D4F73BE2BA5912F00EBF32A /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		4DC29F072B97FFE9004F4672 /* project2-BeReal Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project2-BeReal Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC29F0A2B97FFE9004F4672 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DC29F0C2B97FFE9004F4672 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			children = (
 				4DC29F312B98E11E004F4672 /* User.swift */,
 				4DC29F332B98E124004F4672 /* Post.swift */,
+				4D4F73BE2BA5912F00EBF32A /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				4DC29F3F2B993C1E004F4672 /* DataFormatter+Extension.swift in Sources */,
 				4DC29F2E2B98E0B7004F4672 /* PostViewController.swift in Sources */,
 				4DC29F252B98DF64004F4672 /* SignUpViewController.swift in Sources */,
+				4D4F73BF2BA5912F00EBF32A /* Comment.swift in Sources */,
 				4DC29F342B98E124004F4672 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

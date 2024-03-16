@@ -264,6 +264,12 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHX-an-MOi">
+                                                    <rect key="frame" x="298" y="481" width="75" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="nv2-y5-2Ud" secondAttribute="trailing" priority="999" id="7uo-9O-LmM"/>
@@ -275,6 +281,7 @@
                                         <connections>
                                             <outlet property="blurView" destination="g5F-dy-Lfv" id="DDx-N4-nMp"/>
                                             <outlet property="captionLabel" destination="ndT-mp-D2d" id="pbB-V4-14c"/>
+                                            <outlet property="commentButton" destination="yHX-an-MOi" id="D4e-GE-QRH"/>
                                             <outlet property="dateLabel" destination="T4h-Kg-iav" id="u4O-dq-cbM"/>
                                             <outlet property="locationLabel" destination="Jz2-vc-wOc" id="BcD-Nk-cVU"/>
                                             <outlet property="postImageView" destination="Dkb-Ie-dil" id="BaV-jo-oy8"/>

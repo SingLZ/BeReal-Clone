@@ -21,6 +21,7 @@ class PostCell: UITableViewCell {
 
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var blurView: UIVisualEffectView!
+    @IBOutlet weak var commentButton: UIButton!
     private var imageDataRequest: DataRequest?
 
     func configure(with post: Post) {
@@ -59,7 +60,12 @@ class PostCell: UITableViewCell {
             dateLabel.text = DateFormatter.postFormatter.string(from: date)
         }
         
-        
+        // Set the location label text
+                if let city = post.city, let state = post.state {
+                    locationLabel.text = "\(city), \(state)"
+                } else {
+                    locationLabel.text = "Location Unknown"
+                }
     
         
         // TODO: Pt 2 - Show/hide blur view

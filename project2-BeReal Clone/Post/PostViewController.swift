@@ -22,9 +22,14 @@ class PostViewController: UIViewController {
     
     @IBOutlet weak var shareButton: UIButton!
     private var pickedImage: UIImage?
-
+    private var isGeocoding = false
+    var post = Post()
+    
+    let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.delegate = self
     }
 
     @IBAction func onPickedImageTapped(_ sender: UIButton) {
@@ -67,7 +72,7 @@ class PostViewController: UIViewController {
         let imageFile = ParseFile(name: "image.jpg", data: imageData)
         
         // Create Post object
-        var post = Post()
+        //var post = Post()
         
         // Set properties
         post.imageFile = imageFile
@@ -76,32 +81,78 @@ class PostViewController: UIViewController {
         // Set the user as the current user
         post.user = User.current
         
-        // Save object in background (async)
-        post.save { [weak self] result in
-            if var currentUser = User.current{
-                currentUser.lastPostedDate = Date()
-                // Switch to the main thread for any UI updates
-                currentUser.save { [weak self] result in
-                    switch result {
-                    case .success(let post):
-                        print("✅ Post Saved! \(post)")
-                        
-                        // TODO: Pt 2 - Update user's last posted date
-                        // Switch to the main thread for any UI updates
-                        DispatchQueue.main.async {
-                            // Return to previous view controller
-                            self?.navigationController?.popViewController(animated: true)
+        
+        
+        // Call geocodeLocation to update location information
+            if let location = locationManager.location {
+                geocodeLocation(location) { city, state in
+                    // Update post with city and state information
+                    self.post.city = city
+                    self.post.state = state
+                    
+                    // Save object in background (async)
+                    self.post.save { [weak self] result in
+                        if var currentUser = User.current {
+                            currentUser.lastPostedDate = Date()
+                            // Switch to the main thread for any UI updates
+                            DispatchQueue.main.async {
+                                // Return to previous view controller
+                                self?.navigationController?.popViewController(animated: true)
+                            }
                         }
-                        
-                    case .failure(let error):
-                        self?.showAlert(description: error.localizedDescription)
                     }
                 }
             }
+        
+        // Save object in background (async)
+        //post.save { [weak self] result in
+          //  if var currentUser = User.current{
+            //    currentUser.lastPostedDate = Date()
+                // TODO: Pt 2 - Update user's last posted date
+                // Switch to the main thread for any UI updates
+                // Switch to the main thread for any UI updates
+              //  currentUser.save { [weak self] result in
+                //    switch result {
+                  //  case .success(let post):
+                    //    print("✅ Post Saved! \(post)")
+                        
+                        // TODO: Pt 2 - Update user's last posted date
+                        // Switch to the main thread for any UI updates
+                      //  DispatchQueue.main.async {
+                            // Return to previous view controller
+                        //    self?.navigationController?.popViewController(animated: true)
+                        //}
+                        
+                    //case .failure(let error):
+                      //  self?.showAlert(description: error.localizedDescription)
+                    //}
+                //}
+            //}
+        //}
+}
+
+    // Modify geocodeLocation function to accept a completion handler for updating post with location information
+    private func geocodeLocation(_ location: CLLocation, completion: @escaping (String?, String?) -> Void) {
+        // Reverse geocode the location to get city and state
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(location) { placemarks, error in
+            if let error = error {
+                print("Geocoding error: \(error.localizedDescription)")
+                completion(nil, nil)
+                return
+            }
             
+            if let placemark = placemarks?.first {
+                let city = placemark.locality
+                let state = placemark.administrativeArea
+                completion(city, state)
+            } else {
+                completion(nil, nil)
+            }
         }
     }
-
+    
+    
     @IBAction func OnTakePhotoTapped(_ sender: Any) {
         // TODO: Pt 2 - Present camera
         // Make sure the user's camera is available
@@ -202,5 +253,72 @@ extension PostViewController: UIImagePickerControllerDelegate, UINavigationContr
 
             // Set image to use when saving post
             pickedImage = image
+    }
+}
+
+
+
+extension PostViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else {
+            print("Error: Unable to retrieve location.")
+            return
+        }
+        
+        // Check if a geocoding request is already in progress
+        guard !isGeocoding else {
+            // Geocoding request is in progress, ignore this update
+            return
+        }
+        
+        // Start geocoding
+        geocodeLocation(location)
+    }
+    
+    private func geocodeLocation(_ location: CLLocation) {
+        // Set flag to indicate geocoding is in progress
+        isGeocoding = true
+        
+        // Reverse geocode the location to get city and state
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(location) { [weak self] (placemarks, error) in
+            guard let self = self else { return }
+            
+            // Reset flag to indicate geocoding is complete
+            self.isGeocoding = false
+            
+            if let error = error {
+                // Handle geocoding error
+                self.handleGeocodingError(error)
+                return
+            }
+            
+            // If there is at least one placemark, extract city and state
+            if let placemark = placemarks?.first {
+                if let city = placemark.locality, let state = placemark.administrativeArea {
+                    // Update current post with city and state
+                    self.post.city = city
+                    print(city)
+                    print(state)
+                    self.post.state = state
+                }
+            }
+        }
+       
+    }
+    
+    
+    private func handleGeocodingError(_ error: Error) {
+        if let clError = error as? CLError, clError.code == .network {
+            // Network error occurred, display error message to the user
+            DispatchQueue.main.async {
+                self.showAlert(description: "Unable to retrieve location. Please check your network connection and try again.")
+            }
+        } else {
+            // Generic geocoding error occurred, display generic error message
+            DispatchQueue.main.async {
+                self.showAlert(description: "An error occurred while retrieving location.")
+            }
+        }
     }
 }
